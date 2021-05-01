@@ -19,6 +19,10 @@ public class ObjectPooler : Singleton <ObjectPooler>
         }
     }
 
+    /// <summary>
+    /// Returns object from pool. If there no free objects in pool and pool can grow, will create new object instance
+    /// </summary>
+    /// <returns></returns>
     public GameObject GetPooledObject()
     {
         for (int i= 0; i< pooledObjects.Count; i++)
@@ -33,12 +37,17 @@ public class ObjectPooler : Singleton <ObjectPooler>
         Debug.LogWarning("There are no free objects in pool left");
         return null;
     }
+    public void ReturnObjectToPool(GameObject obj)
+    {
+        obj.SetActive(false);
+    }
 
     private GameObject NewObjectInPool(GameObject prefab)
     {
         GameObject obj = (GameObject)Instantiate(prefab);
+        obj.transform.SetParent(this.gameObject.transform);
         obj.SetActive(false);
         pooledObjects.Add(obj);
         return obj;
-    }
+    }   
 }
