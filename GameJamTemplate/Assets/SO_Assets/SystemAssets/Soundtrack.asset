@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9a18ceb2317991489adf7be4f8d3cfd, type: 3}
+  m_Name: Soundtrack
+  m_EditorClassIdentifier: Assembly-CSharp::SountrackSet_SO
+  introTrack: {fileID: 8300000, guid: 106e59e7bf89e446c949c85924ac0435, type: 3}
+  gameOverTrack: {fileID: 8300000, guid: 106e59e7bf89e446c949c85924ac0435, type: 3}
+  ingameTrackList:
+  - {fileID: 8300000, guid: fb36ca46cb0114d3cb41a7a677adcc1d, type: 3}
